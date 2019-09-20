@@ -1,7 +1,7 @@
 # Azure SkypeforBusiness lab V3
 Azure template for Skype for Business lab deployment with Edge server, ADFS and Freeswitch PSTN Gateway. It creates an On-prem Skype for Business 2015 deployment ready to integrate with Cloud PBX
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fibenbouzid%2FSkypeforBusiness_lab_V3%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmitchelljb%2FSkypeforBusiness_lab_V3%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
@@ -9,7 +9,7 @@ Azure template for Skype for Business lab deployment with Edge server, ADFS and 
 
 The intent of version V3 is to enable deployment of Office 365 CloudPBX with On-premise PSTN Connectivity Via On-Prem Skype for Business deployment. It includes folowing components:
 <a >
-<img src ="https://raw.githubusercontent.com/ibenbouzid/SkypeforBusiness_lab_V3/master/images/SkypeLab.jpg" align="middle" width="762" height="595"/>
+<img src ="https://raw.githubusercontent.com/mitchelljb/SkypeforBusiness_lab_V3/master/images/SkypeLab.jpg" align="middle" width="762" height="595"/>
 </a>
 - **VM-SFB-AD01**: Active Directory Domain Controller, Certificate Authority and Internal DNS roles
 - **VM-SFB-FE01**: Skype for Business Front End Standard Edition including Mediation server
@@ -34,11 +34,11 @@ Before starting the deployment there is some steps to follow:
 5. Fill parameters with recommended guidelines then start deployment by clicking the purshase button. (The deployment is free :) nothing to purshase except the normal VM consumption prices) 
 
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fibenbouzid%2FSkypeforBusiness_lab_V3%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmitchelljb%2FSkypeforBusiness_lab_V3%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fibenbouzid%2FSkypeforBusiness_lab_V3%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fmitchelljb%2FSkypeforBusiness_lab_V3%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
@@ -49,13 +49,13 @@ After creating a storage account name you need to create a Fileshare named **sky
 The folder structure **skype** should look like this:
 
 <a >
-<img src="https://raw.githubusercontent.com/ibenbouzid/SkypeforBusiness_lab_V3/master/images/FolderStructure.jpg" width="512" height="428"/>
+<img src="https://raw.githubusercontent.com/mitchelljb/SkypeforBusiness_lab_V3/master/images/FolderStructure.jpg" width="512" height="428"/>
 </a>
 
 Cert folder will include your public certificates.
 
 <a >
-<img src="https://raw.githubusercontent.com/ibenbouzid/SkypeforBusiness_lab_V3/master/images/certificates.jpg" width="466" height="271"/>
+<img src="https://raw.githubusercontent.com/mitchelljb/SkypeforBusiness_lab_V3/master/images/certificates.jpg" width="466" height="271"/>
 </a>
 
 
@@ -105,7 +105,7 @@ You will have to fill some parameters like your storage account name and the Sha
  How to get the Storage Access Key:
 
 <a >
-<img src="https://raw.githubusercontent.com/ibenbouzid/SkypeforBusiness_lab_V3/master/images/AccessKey.png" width="833" height="413"/>
+<img src="https://raw.githubusercontent.com/mitchelljb/SkypeforBusiness_lab_V3/master/images/AccessKey.png" width="833" height="413"/>
 </a>
 
 ## Post deplyoment tasks
@@ -123,7 +123,7 @@ You will have to fill some parameters like your storage account name and the Sha
 + Try to call extension 1001 and verify that pgas@yourdomain.com skype clients ring.
 + If all thoses steps are successful connect to VM-SFB-AD01 install AzureADconnect with the msi on the desktop and start configuring your Hybrid environement.
 
-You could leverage [Offices 365 scripts](https://github.com/ibenbouzid/Office365Scripts) for configuring your Custom domain.
+You could leverage [Offices 365 scripts](https://github.com/mitchelljb/Office365Scripts) for configuring your Custom domain.
 It is possible to connect Freeswitch with external PSTN Providers post installation.
 In order to do that you have to modify *freeswitch.xml* file in the Reverse proxy located in *ProgramFiles/Freeswitch/conf/freeswithc.xml*. Then restart Freeswitch service.
 An example of PSTN poviders configuration is already there you just have to modify SIP domain parameters and credentials. For help check examples [here](https://wiki.freeswitch.org/wiki/SIP_Provider_Examples)
